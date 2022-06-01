@@ -1,6 +1,6 @@
 {
     "name": "@salutejs/create-app",
-    "version": "0.1.7",
+    "version": "0.1.8-canary-0",
     "scripts": {
         "build": "echo no build needed",
         "test": "jest --testTimeout=30000",
@@ -49,8 +49,11 @@
     "files": [
         "src/**/*"
     ],
-    "bin": "./index.sh",
+    "bin": "./src/cliWizard.mjs",
     "publishConfig": {
         "access": "public"
+    },
+    "engines": {
+        "node" : ">=12.22.0"
     }
 }
