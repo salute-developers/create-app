@@ -1,11 +1,13 @@
 {
     "name": "@salutejs/create-app",
     "version": "0.1.7",
+    "author": "Salute Frontend Team <salute.developers@gmail.com>",
     "scripts": {
         "build": "echo no build needed",
         "test": "jest --testTimeout=30000",
         "lint": "eslint --ext .js,.mjs ./src",
-        "start": "bash index.sh"
+        "start": "bash index.sh",
+        "release": "git diff && auto shipit"
     },
     "dependencies": {
         "chalk": "5.0.0",
@@ -24,6 +26,7 @@
         "@salutejs/eslint-config": "0.4.0",
         "@typescript-eslint/eslint-plugin": "2.29.0",
         "@typescript-eslint/parser": "2.29.0",
+        "auto": "10.36.5",
         "babel-eslint": "10.1.0",
         "concat-stream": "2.0.0",
         "eslint": "6.8.0",
