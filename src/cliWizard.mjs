@@ -1,10 +1,12 @@
+#!/usr/bin/env node
+
 import inquirer from 'inquirer';
 import path from 'path';
 import chalk from 'chalk';
 import { execSync } from 'child_process';
 import { existsSync } from 'fs';
 
-import { cleanUp, downloadTemplatePackage, extractTemplatePackage, getArgv, printLogo } from './utils.mjs';
+import { cleanUp, downloadTemplatePackage, extractTemplatePackage, getArgv, getDirname, printLogo } from './utils.mjs';
 import { buildTemplateTask } from './buildTemplate.mjs';
 import { getConfigFromAnswers } from './config.mjs';
 import { defaultRules } from './defaults/rules.mjs';
@@ -21,7 +23,7 @@ export async function run() {
         const {
             templatePath,
             output,
-            runDir,
+            runDir = process.cwd(),
             configPath = CONFIG_ENTRY_POINT,
             templatePackage = DEFAULT_TEMPLATE,
         } = getArgv();
@@ -120,7 +122,7 @@ export async function run() {
 
         if (answers.installDependencies) {
             console.log('');
-            console.log('Установка зависимостей');
+            console.log('ℹ️  Установка зависимостей');
             console.log('');
             execSync('npm i', {
                 cwd: destination,
@@ -128,7 +130,7 @@ export async function run() {
                 stdio: 'inherit',
             });
             console.log('');
-            console.log('Установка зависимостей завершена');
+            console.log('ℹ️  Установка зависимостей завершена');
         }
 
         console.log('');

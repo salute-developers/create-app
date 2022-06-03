@@ -52,8 +52,11 @@
     "files": [
         "src/**/*"
     ],
-    "bin": "./index.sh",
+    "bin": "./src/cliWizard.mjs",
     "publishConfig": {
         "access": "public"
+    },
+    "engines": {
+        "node": ">=12.22.0"
     }
 }
