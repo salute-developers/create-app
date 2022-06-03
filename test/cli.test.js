@@ -23,15 +23,7 @@ async function runCli(inputs = [], ...args) {
     const cliProcess = cmd.create();
 
     return cliProcess.execute(
-        [
-            '--experimental-import-meta-resolve',
-            './src/cliWizard.mjs',
-            '--runDir',
-            path.dirname(__dirname),
-            '--templatePackage',
-            '@sberdevices/create-canvas-app',
-            ...args,
-        ], // args
+        ['./src/cliWizard.mjs', '--runDir', path.dirname(__dirname), ...args], // args
         inputs,
         {
             env: {
@@ -48,7 +40,7 @@ describe('cli', () => {
     });
 
     it('default case of template', async () => {
-        const response = await runCli(defaultInputs);
+        const response = await runCli(defaultInputs, '--templatePath', './test/__mock__/template-package');
 
         console.log(response);
         expect(response).toMatchSnapshot();
@@ -60,7 +52,7 @@ describe('cli', () => {
     it('template without feature toggles', async () => {
         const inputs = [defaultInputs[0], defaultInputs[2]];
 
-        const response = await runCli(inputs, '--configPath', `${__dirname}/__mock__/emptyConfig.mjs`);
+        const response = await runCli(inputs);
 
         console.log(response);
         expect(response).toMatchSnapshot();
@@ -70,7 +62,7 @@ describe('cli', () => {
     });
 
     it('mustache applied to PageIndex', async () => {
-        await runCli(defaultInputs);
+        await runCli(defaultInputs, '--templatePath', './test/__mock__/template-package');
 
         const filePathToCheck = './template-app/src/components/PageIndex.tsx';
         const fileExists = fs.existsSync(filePathToCheck);
