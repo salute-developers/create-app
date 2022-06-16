@@ -1,3 +1,15 @@
+# v0.1.10 (Thu Jun 16 2022)
+
+#### 🐛 Bug Fix
+
+- SPEED-0: Доюавил доку по написанию сторонних шаблонов [#3](https://github.com/salute-developers/create-app/pull/3) ([@zzzorgo](https://github.com/zzzorgo))
+
+#### Authors: 1
+
+- Dmitriy Selyanin ([@zzzorgo](https://github.com/zzzorgo))
+
+---
+
 # v0.1.9 (Fri Jun 03 2022)
 
 #### 🐛 Bug Fix
