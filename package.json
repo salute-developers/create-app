@@ -1,6 +1,6 @@
 {
     "name": "@salutejs/create-app",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "author": "Salute Frontend Team <salute.developers@gmail.com>",
     "scripts": {
         "build": "echo no build needed",
