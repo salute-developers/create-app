@@ -1,3 +1,16 @@
+# v0.1.11 (Tue Jun 28 2022)
+
+#### 🐛 Bug Fix
+
+- Опечатка cerate -> create [#4](https://github.com/salute-developers/create-app/pull/4) (nkshoykhet@sberbank.ru [@nataschachu](https://github.com/nataschachu))
+
+#### Authors: 2
+
+- [@nataschachu](https://github.com/nataschachu)
+- Наталья Шойхет (nkshoykhet@sberbank.ru)
+
+---
+
 # v0.1.10 (Thu Jun 16 2022)
 
 #### 🐛 Bug Fix
