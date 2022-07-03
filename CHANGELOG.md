@@ -1,3 +1,16 @@
+# v0.1.12 (Sun Jul 03 2022)
+
+#### 🐛 Bug Fix
+
+- SPEED-393: Error handling [#5](https://github.com/salute-developers/create-app/pull/5) (vanxellshing24@gmail.com [@RPG59](https://github.com/RPG59))
+
+#### Authors: 2
+
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+- rpg59 (vanxellshing24@gmail.com)
+
+---
+
 # v0.1.11 (Tue Jun 28 2022)
 
 #### 🐛 Bug Fix
