@@ -6,7 +6,14 @@ import chalk from 'chalk';
 import { execSync } from 'child_process';
 import { existsSync } from 'fs';
 
-import { cleanUp, downloadTemplatePackage, extractTemplatePackage, getArgv, printLogo } from './utils.mjs';
+import {
+    cleanUp,
+    downloadTemplatePackage,
+    extractTemplatePackage,
+    getArgv,
+    printLogo,
+    RuntimeError,
+} from './utils.mjs';
 import { buildTemplateTask } from './buildTemplate.mjs';
 import { getConfigFromAnswers } from './config.mjs';
 import { defaultRules } from './defaults/rules.mjs';
@@ -17,8 +24,6 @@ const DEFAULT_TEMPLATE = '@salutejs/canvas-example';
 const checkboxInstructionsTranslation = `\n (Нажмите ${chalk.bold(
     chalk.cyan('<space>'),
 )} чтобы переключить функцию, ${chalk.bold(chalk.cyan('<enter>'))} чтобы завершить выбор)\n`;
-
-class RuntimeError extends Error {}
 
 export async function run() {
     try {

@@ -73,3 +73,5 @@ export function printLogo() {
     const strLogo = JSON.parse(jsonLogo);
     console.log(strLogo);
 }
+
+export class RuntimeError extends Error {}
