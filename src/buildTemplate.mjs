@@ -6,6 +6,7 @@ import micromatch from 'micromatch';
 import { mustachePlugin } from './gulpPlugins/mustachePlugin.mjs';
 import { buildJsonPlugin } from './gulpPlugins/buildJsonPlugin.mjs';
 import { renamePlugin } from './gulpPlugins/renamePlugin.mjs';
+import { RuntimeError } from './utils.mjs';
 
 const { src, dest } = vinylFs;
 
@@ -49,7 +50,9 @@ export const buildTemplateTask = async (config, rules) => {
 
         taskPromises.push(taskFinished);
 
-        fs.rmdirSync(destination, { recursive: true });
+        if (fs.existsSync(destination)) {
+            throw new RuntimeError(`create-app: Cannot create '${destination}': File exists`);
+        }
 
         return buildTemplate(source, destination, config, rules)
             .on('end', () => {
