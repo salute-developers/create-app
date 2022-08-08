@@ -1,3 +1,16 @@
+# v0.1.13 (Mon Aug 08 2022)
+
+#### 🐛 Bug Fix
+
+- SPEED-458: restrict node version < required, add error if template di… [#6](https://github.com/salute-developers/create-app/pull/6) (vanxellshing24@gmail.com [@RPG59](https://github.com/RPG59))
+
+#### Authors: 2
+
+- Ivan Kanshin ([@RPG59](https://github.com/RPG59))
+- rpg59 (vanxellshing24@gmail.com)
+
+---
+
 # v0.1.12 (Sun Jul 03 2022)
 
 #### 🐛 Bug Fix
