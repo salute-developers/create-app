@@ -1,3 +1,15 @@
+# v0.1.14 (Fri Oct 13 2023)
+
+#### 🐛 Bug Fix
+
+- Create semgrep.yml [#12](https://github.com/salute-developers/create-app/pull/12) ([@arsenykruglikov](https://github.com/arsenykruglikov))
+
+#### Authors: 1
+
+- Arseny Kruglikov ([@arsenykruglikov](https://github.com/arsenykruglikov))
+
+---
+
 # v0.1.13 (Mon Aug 08 2022)
 
 #### 🐛 Bug Fix
