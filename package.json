@@ -17,7 +17,7 @@
         "lodash": "4.17.21",
         "micromatch": "4.0.4",
         "mustache": "4.2.0",
-        "node-fetch": "3.2.4",
+        "node-fetch": "3.2.10",
         "through2": "4.0.2",
         "vinyl-fs": "3.0.3",
         "yargs": "17.3.1"
